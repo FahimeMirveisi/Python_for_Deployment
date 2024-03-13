@@ -6,55 +6,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>494</width>
-    <height>658</height>
+    <width>499</width>
+    <height>662</height>
    </rect>
-  </property>
-  <property name="palette">
-   <palette>
-    <active>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>153</red>
-        <green>193</green>
-        <blue>241</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </active>
-    <inactive>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>153</red>
-        <green>193</green>
-        <blue>241</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </inactive>
-    <disabled>
-     <colorrole role="Base">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>153</red>
-        <green>193</green>
-        <blue>241</blue>
-       </color>
-      </brush>
-     </colorrole>
-     <colorrole role="Window">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>153</red>
-        <green>193</green>
-        <blue>241</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </disabled>
-   </palette>
   </property>
   <property name="font">
    <font>
@@ -72,7 +26,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>assets/images/28.png</normaloff>assets/images/28.png</iconset>
+    <normaloff>assets/appicon.png</normaloff>assets/appicon.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -84,8 +38,8 @@
    <widget class="QPushButton" name="btn_search">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>570</y>
+      <x>200</x>
+      <y>580</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -97,34 +51,11 @@
      <iconset theme="system-search"/>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>150</y>
-      <width>88</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="currentSection">
-     <enum>QDateTimeEdit::DaySection</enum>
-    </property>
-    <property name="displayFormat">
-     <string>yy/M/d</string>
-    </property>
-    <property name="date">
-     <date>
-      <year>2024</year>
-      <month>4</month>
-      <day>2</day>
-     </date>
-    </property>
-   </widget>
    <widget class="QLabel" name="temp_today">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>70</y>
+      <x>240</x>
+      <y>180</y>
       <width>72</width>
       <height>19</height>
      </rect>
@@ -136,8 +67,8 @@
    <widget class="QLineEdit" name="search_box">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>520</y>
+      <x>90</x>
+      <y>530</y>
       <width>331</width>
       <height>41</height>
      </rect>
@@ -149,34 +80,43 @@
    <widget class="QLabel" name="city">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>100</y>
+      <x>80</x>
+      <y>30</y>
       <width>72</width>
       <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>city</string>
+     <string>Mashhad</string>
     </property>
    </widget>
    <widget class="QLabel" name="icon_location">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>90</y>
-      <width>111</width>
-      <height>41</height>
+      <x>20</x>
+      <y>10</y>
+      <width>51</width>
+      <height>51</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
-     <string>location icon</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets/ui_resources.qrc">:/location icon/location_icon/icons8-location-64(2).png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="icon_now">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>80</y>
+      <x>180</x>
+      <y>120</y>
       <width>72</width>
       <height>19</height>
      </rect>
@@ -188,8 +128,8 @@
    <widget class="QLabel" name="text1">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>160</y>
+      <x>340</x>
+      <y>30</y>
       <width>51</width>
       <height>19</height>
      </rect>
@@ -201,8 +141,8 @@
    <widget class="QLabel" name="text2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>200</y>
+      <x>40</x>
+      <y>280</y>
       <width>51</width>
       <height>19</height>
      </rect>
@@ -214,8 +154,8 @@
    <widget class="QLabel" name="text3">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>200</y>
+      <x>120</x>
+      <y>280</y>
       <width>51</width>
       <height>19</height>
      </rect>
@@ -224,97 +164,118 @@
      <string>km/h</string>
     </property>
    </widget>
-   <widget class="QLabel" name="text4">
+   <widget class="QLabel" name="background_label">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>330</y>
-      <width>81</width>
-      <height>19</height>
+      <x>-10</x>
+      <y>-20</y>
+      <width>511</width>
+      <height>661</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/newPrefix/background_images/wind-spring-white-stratosphere-pure.jpg);</string>
+    </property>
     <property name="text">
-     <string>Tomorrow</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets/ui_resources.qrc">:/newPrefix/background_images/wind-spring-white-stratosphere-pure.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="text5">
+   <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>330</y>
-      <width>51</width>
-      <height>19</height>
+      <x>30</x>
+      <y>350</y>
+      <width>451</width>
+      <height>161</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Mon</string>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
     </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QLabel" name="text5">
+       <property name="text">
+        <string>Mon</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="icon_tomo">
+       <property name="styleSheet">
+        <string notr="true">image: url(:/newPrefix/icons/dark/png/00.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="text4">
+       <property name="text">
+        <string>Tomorrow</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="text6">
+       <property name="text">
+        <string>Tue</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="icon_ntomo">
+       <property name="text">
+        <string>icon_now</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="icon_nntomo">
+       <property name="text">
+        <string>icon_now</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="text6">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>330</y>
-      <width>51</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Tue</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="icon_tomo">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>390</y>
-      <width>72</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>icon_now</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="icon_ntomo">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>390</y>
-      <width>72</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>icon_now</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="icon_nntomo">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>390</y>
-      <width>72</width>
-      <height>19</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>icon_now</string>
-    </property>
-   </widget>
+   <zorder>background_label</zorder>
+   <zorder>btn_search</zorder>
+   <zorder>temp_today</zorder>
+   <zorder>search_box</zorder>
+   <zorder>city</zorder>
+   <zorder>icon_location</zorder>
+   <zorder>icon_now</zorder>
+   <zorder>text1</zorder>
+   <zorder>text2</zorder>
+   <zorder>text3</zorder>
+   <zorder>frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>494</width>
-     <height>24</height>
+     <width>499</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="assets/ui_resources.qrc"/>
+  <include location="../../../../../../home/tolo/.designer/backup/assets/ui_resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

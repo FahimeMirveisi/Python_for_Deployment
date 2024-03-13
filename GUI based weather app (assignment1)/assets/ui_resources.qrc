@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>background_images/10467.jpg</file>
+    <file>background_images/23281.jpg</file>
+    <file>background_images/aerial-view-mountain-covered-fog-beautiful-pink-sky.jpg</file>
+    <file>background_images/Android weather 2.jpg</file>
+    <file>background_images/background-gradient-lights.jpg</file>
+    <file>background_images/beautiful-mountains.jpg</file>
+    <file>background_images/Day.jpg</file>
+    <file>background_images/fantastic-cloudscape.jpg</file>
+    <file>background_images/fresh-grass-with-sky-background.jpg</file>
+    <file>background_images/Gallery Background n.png</file>
+    <file>background_images/Gallery Background s.png</file>
+    <file>background_images/Haze.jpg</file>
+    <file>background_images/Nite.jpg</file>
+    <file>background_images/v1015-104a.jpg</file>
+    <file>background_images/wind-spring-white-stratosphere-pure.jpg</file>
+  </qresource>
+  <qresource prefix="location icon">
+    <file>location_icon/icons8-location-64.png</file>
+    <file>location_icon/icons8-location-64(1).png</file>
+    <file>location_icon/icons8-location-64(2).png</file>
+    <file>location_icon/icons8-location-96.png</file>
+  </qresource>
+  <qresource prefix="newPrefix">
+    <file>icons/dark/png/00.png</file>
+  </qresource>
+</RCC>

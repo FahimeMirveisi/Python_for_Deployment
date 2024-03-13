@@ -1,0 +1,17 @@
+Mix snow/rain
+Broken clouds
+Overcast clouds
+Moderate rain
+Light rain
+Light shower rain
+Few clouds
+Scattered clouds
+Clear Sky
+Thunderstorm with rain
+Thunderstorm with heavy rain
+Moderate rain
+Light snow
+Heavy snow
+Heavy rain
+Snow
+Flurries
