@@ -10,12 +10,14 @@
 #### Weather app outputs
 
 ##### Search page
-![search](assets/outputs images/search page.png)
+![search](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/search%20page.pngs)
 
 
 ##### Results with Tehran, Mashhad and Alaska cities
 
 
-![Alaska](assets/outputs images/alaska.png)
-![Tehran](assets/outputs images/Tehran.png)
-![Mashhad](assets/outputs images/Mashhad.png)
+![Alaska](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/alaska.png)
+
+![Tehran](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/Tehran.png)
+
+![Mashhad](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/Mashhad.png)
