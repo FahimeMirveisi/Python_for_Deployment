@@ -18,14 +18,14 @@ class MainWindow(QMainWindow, QFrame):
         self.main_window = loader.load("main_window.ui")
         
         self.main_window.show()
-
+        
              
         self.main_window.search_box.setPlaceholderText("Which city?")
 
-        background_pixmap = QPixmap('/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/background_images/wind-spring-white-stratosphere-pure.jpg')
+        background_pixmap = QPixmap('assets/background_images/wind-spring-white-stratosphere-pure.jpg')
         self.main_window.background_label.setPixmap(background_pixmap)
 
-        icon_loc_pixmap = QPixmap('/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/location_icon/loc2.png')
+        icon_loc_pixmap = QPixmap('assets/location_icon/loc2.png')
         self.main_window.icon_location.setPixmap(icon_loc_pixmap)
 
         self.main_window.btn_search.clicked.connect(self.search_weather)
@@ -34,43 +34,43 @@ class MainWindow(QMainWindow, QFrame):
     def weather_image(self,weather_des):
 
             if weather_des == "Mix snow/rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/05.png"
+                img_path = "assets/weather icons/flat_black/05.png"
             elif weather_des == "Broken clouds":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/30.png"
+                img_path = "assets/weather icons/flat_black/30.png"
             elif weather_des == "Overcast clouds":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/26.png"
+                img_path = "assets/weather icons/flat_black/26.png"
             elif weather_des == "Moderate rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/12.png"
+                img_path = "assets/weather icons/flat_black/12.png"
             elif weather_des == "Light rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/09.png"
+                img_path = "assets/weather icons/flat_black/09.png"
             elif weather_des == "Light shower rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/02.png"
+                img_path = "assets/weather icons/flat_black/02.png"
             elif weather_des == "Few clouds":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/30.png"
+                img_path = "assets/weather icons/flat_black/30.png"
             elif weather_des == "Scattered clouds":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/28.png"
+                img_path = "assets/weather icons/flat_black/28.png"
             elif weather_des == "Clear Sky":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/32.png"
+                img_path = "assets/weather icons/flat_black/32.png"
             elif weather_des == "Thunderstorm with rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/00.png"
+                img_path = "assets/weather icons/flat_black/00.png"
             elif weather_des == "Thunderstorm with heavy rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/00.png"
+                img_path = "assets/weather icons/flat_black/00.png"
             elif weather_des == "Light snow":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/13.png"
+                img_path = "assets/weather icons/flat_black/13.png"
             elif weather_des == "Heavy snow":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/16.png"
+                img_path = "assets/weather icons/flat_black/16.png"
 
             elif weather_des == "Heavy rain":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/01.png"
+                img_path = "assets/weather icons/flat_black/01.png"
 
             elif weather_des == "Snow":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/14.png"
+                img_path = "assets/weather icons/flat_black/14.png"
 
             elif weather_des == "Flurries":
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/15.png"
+                img_path = "assets/weather icons/flat_black/15.png"
 
             else:
-                img_path = "/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/weather icons/flat_black/44.png" 
+                img_path = "assets/weather icons/flat_black/44.png" 
 
             return img_path
     
