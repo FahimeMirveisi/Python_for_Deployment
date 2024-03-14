@@ -7,6 +7,15 @@
 - Python
 -API link:  https://goweather.herokuapp.com/weather/Mashhad
 
-#[weather](GUI based weather app (assignment1)/assets/10467.jpg)
+#### Weather app outputs
+
+##### Search page
+![search](assets/outputs images/search page.png)
 
 
+##### Results with Tehran, Mashhad and Alaska cities
+
+
+![Alaska](assets/outputs images/alaska.png)
+![Tehran](assets/outputs images/Tehran.png)
+![Mashhad](assets/outputs images/Mashhad.png)
