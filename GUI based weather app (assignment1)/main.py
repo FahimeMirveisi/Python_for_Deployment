@@ -20,7 +20,6 @@ class MainWindow(QMainWindow, QFrame):
         self.main_window.show()
 
              
-        #self.main_window.search_box.setMaxLength(10)
         self.main_window.search_box.setPlaceholderText("Which city?")
 
         background_pixmap = QPixmap('/media/tolo/New Volume/PyDeploy Projects/Python_for_Deployment/GUI based weather app (assignment1)/assets/background_images/wind-spring-white-stratosphere-pure.jpg')
@@ -104,6 +103,7 @@ class MainWindow(QMainWindow, QFrame):
             # 3.today wind speed
             today_wind = today_dict["wind_spd"]
             self.main_window.wind_speed.setText(str(today_wind)  + "km/h")
+            self.main_window.txt_wind.setText("Wind:")
 
             # 4.today temperature
             today_temp = today_dict["temp"]
@@ -121,7 +121,7 @@ class MainWindow(QMainWindow, QFrame):
             
             tomorrow_date = tomorrow_dict["datetime"]
             tomorrow_date = datetime.strptime(tomorrow_date, '%Y-%m-%d')
-            today_str_date = datetime.strftime(tomorrow_date, '%A %d %B')
+            tomorrow_str_date = datetime.strftime(tomorrow_date, '%A %d %B')
             self.main_window.txt_tomo.setText("Tomorrow")
 
             # 2.tomorrow weather description
@@ -141,27 +141,84 @@ class MainWindow(QMainWindow, QFrame):
             icon_weather_pixmap_tomorrow= QPixmap(image_path)
             self.main_window.icon_tomo.setPixmap(icon_weather_pixmap_tomorrow)
 
+
+
+
+            # **********NEXT TOMORROW**********
+            ntomorrow_dict = json_data["data"][2]
+            # 1.next tomorrow time
+            
+            ntomorrow_date = ntomorrow_dict["datetime"]
+            ntomorrow_date = datetime.strptime(ntomorrow_date, '%Y-%m-%d')
+            ntomorrow_str_date = datetime.strftime(ntomorrow_date, '%A %d %B')
+
+            ntomo_date = ""
+            for i in ntomorrow_str_date:
+                if i != " ":
+                    ntomo_date += i
+                else:
+                    break
+
+            
+            self.main_window.txt_ntomo.setText(ntomo_date)
+
+            # 2.next tomorrow weather description
+            ntomorrow_weather = ntomorrow_dict["weather"]["description"]
+            #self.main_window.now_des.setText(str(ntomorrow_weather))
+
+            # 3.next tomorrow wind speed
+            #tomorrow_wind = today_dict["wind_spd"]
+            #self.main_window.wind_speed.setText(str(tomorrow_wind)  + "km/h")
+
+            # 4.next tomorrow temperature
+            ntomorrow_temp = ntomorrow_dict["temp"]
+            self.main_window.temp_ntomo.setText(str(ntomorrow_temp) + "°C")
+            
+            image_path = self.weather_image(ntomorrow_weather)
+
+            icon_weather_pixmap_ntomorrow= QPixmap(image_path)
+            self.main_window.icon_ntomo.setPixmap(icon_weather_pixmap_ntomorrow)
+
+
+
+
+            # **********NEXT NEXT TOMORROW**********
+            nntomorrow_dict = json_data["data"][3]
+            # 1.next next tomorrow time
+            
+            nntomorrow_date = nntomorrow_dict["datetime"]
+            nntomorrow_date = datetime.strptime(nntomorrow_date, '%Y-%m-%d')
+            nntomorrow_str_date = datetime.strftime(nntomorrow_date, '%A %d %B')
+
+            nntomo_date = ""
+            for i in nntomorrow_str_date:
+                if i != " ":
+                    nntomo_date += i
+                else:
+                    break
+
+            
+            self.main_window.txt_nntomo.setText(nntomo_date)
+
+            # 2.next next tomorrow weather description
+            nntomorrow_weather = nntomorrow_dict["weather"]["description"]
+            #self.main_window.now_des.setText(str(tomorrow_weather))
+
+            # 3.next next tomorrow wind speed
+            #nntomorrow_wind = nntomorrow_dict["wind_spd"]
+            #self.main_window.wind_speed.setText(str(nntomorrow_wind)  + "km/h")
+
+            # 4.next next tomorrow temperature
+            nntomorrow_temp = nntomorrow_dict["temp"]
+            self.main_window.temp_nntomo.setText(str(nntomorrow_temp) + "°C")
+            
+            image_path = self.weather_image(nntomorrow_weather)
+
+            icon_weather_pixmap_nntomorrow= QPixmap(image_path)
+            self.main_window.icon_nntomo.setPixmap(icon_weather_pixmap_nntomorrow)
+
         else:
             print("*** API onnection problem ***")
-
-        
-
-
-        
-
-        # date_time = json_data["data"][0]["datetime"]
-        # normal_date = datetime.strptime(date_time, '%Y-%m-%d')
-        # date = normal_date.strftime('%A, %d %B')
-        # description_weather = json_data["data"][0]["weather"]["description"]
-        # wind_speed = json_data["data"][0]["wind_spd"]
-        # today_temp = json_data["data"][0]["temp"]
-
-        
-
-
-
-
-    
 
         
         
