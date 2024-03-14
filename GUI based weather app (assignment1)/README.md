@@ -10,7 +10,7 @@
 #### Weather app outputs
 
 ##### Search page
-![search](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/search%20page.pngs)
+![search](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/search%20page.png)
 
 
 ##### Results with Tehran, Mashhad and Alaska cities
