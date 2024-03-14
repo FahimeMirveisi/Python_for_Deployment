@@ -1,28 +1,60 @@
 <RCC>
-  <qresource prefix="newPrefix">
-    <file>background_images/10467.jpg</file>
-    <file>background_images/23281.jpg</file>
-    <file>background_images/aerial-view-mountain-covered-fog-beautiful-pink-sky.jpg</file>
-    <file>background_images/Android weather 2.jpg</file>
-    <file>background_images/background-gradient-lights.jpg</file>
-    <file>background_images/beautiful-mountains.jpg</file>
-    <file>background_images/Day.jpg</file>
-    <file>background_images/fantastic-cloudscape.jpg</file>
-    <file>background_images/fresh-grass-with-sky-background.jpg</file>
-    <file>background_images/Gallery Background n.png</file>
-    <file>background_images/Gallery Background s.png</file>
-    <file>background_images/Haze.jpg</file>
-    <file>background_images/Nite.jpg</file>
-    <file>background_images/v1015-104a.jpg</file>
+  <qresource prefix="background_image">
     <file>background_images/wind-spring-white-stratosphere-pure.jpg</file>
   </qresource>
-  <qresource prefix="location icon">
-    <file>location_icon/icons8-location-64.png</file>
-    <file>location_icon/icons8-location-64(1).png</file>
-    <file>location_icon/icons8-location-64(2).png</file>
-    <file>location_icon/icons8-location-96.png</file>
+  <qresource prefix="location_icon">
+    <file>location_icon/loc1.png</file>
+    <file>location_icon/loc2.png</file>
   </qresource>
-  <qresource prefix="newPrefix">
-    <file>icons/dark/png/00.png</file>
+  <qresource prefix="weather_image">
+    <file>weather icons/flat_black/00.png</file>
+    <file>weather icons/flat_black/01.png</file>
+    <file>weather icons/flat_black/02.png</file>
+    <file>weather icons/flat_black/03.png</file>
+    <file>weather icons/flat_black/04.png</file>
+    <file>weather icons/flat_black/05.png</file>
+    <file>weather icons/flat_black/06.png</file>
+    <file>weather icons/flat_black/07.png</file>
+    <file>weather icons/flat_black/08.png</file>
+    <file>weather icons/flat_black/09.png</file>
+    <file>weather icons/flat_black/10.png</file>
+    <file>weather icons/flat_black/11.png</file>
+    <file>weather icons/flat_black/12.png</file>
+    <file>weather icons/flat_black/13.png</file>
+    <file>weather icons/flat_black/14.png</file>
+    <file>weather icons/flat_black/15.png</file>
+    <file>weather icons/flat_black/16.png</file>
+    <file>weather icons/flat_black/17.png</file>
+    <file>weather icons/flat_black/18.png</file>
+    <file>weather icons/flat_black/19.png</file>
+    <file>weather icons/flat_black/20.png</file>
+    <file>weather icons/flat_black/21.png</file>
+    <file>weather icons/flat_black/22.png</file>
+    <file>weather icons/flat_black/23.png</file>
+    <file>weather icons/flat_black/24.png</file>
+    <file>weather icons/flat_black/25.png</file>
+    <file>weather icons/flat_black/26.png</file>
+    <file>weather icons/flat_black/27.png</file>
+    <file>weather icons/flat_black/28.png</file>
+    <file>weather icons/flat_black/29.png</file>
+    <file>weather icons/flat_black/30.png</file>
+    <file>weather icons/flat_black/31.png</file>
+    <file>weather icons/flat_black/32.png</file>
+    <file>weather icons/flat_black/33.png</file>
+    <file>weather icons/flat_black/34.png</file>
+    <file>weather icons/flat_black/35.png</file>
+    <file>weather icons/flat_black/36.png</file>
+    <file>weather icons/flat_black/37.png</file>
+    <file>weather icons/flat_black/38.png</file>
+    <file>weather icons/flat_black/39.png</file>
+    <file>weather icons/flat_black/40.png</file>
+    <file>weather icons/flat_black/41.png</file>
+    <file>weather icons/flat_black/42.png</file>
+    <file>weather icons/flat_black/43.png</file>
+    <file>weather icons/flat_black/44.png</file>
+    <file>weather icons/flat_black/45.png</file>
+    <file>weather icons/flat_black/46.png</file>
+    <file>weather icons/flat_black/47.png</file>
+    <file>weather icons/flat_black/na.png</file>
   </qresource>
 </RCC>

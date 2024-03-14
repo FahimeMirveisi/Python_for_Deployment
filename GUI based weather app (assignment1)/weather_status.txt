@@ -9,7 +9,6 @@ Scattered clouds
 Clear Sky
 Thunderstorm with rain
 Thunderstorm with heavy rain
-Moderate rain
 Light snow
 Heavy snow
 Heavy rain
