@@ -5,7 +5,7 @@
 #### To create this app we used:
 - Qt for Ui design
 - Python
--API link:  https://api.weatherbit.io/v2.0/forecast/daily?&city={city_name}&key=2effe1f9f06e40cc8ef77eb5be376022
+
 
 ## Weather app outputs
 

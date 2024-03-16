@@ -1,0 +1,4 @@
+https://api.notion.com/v1/databases/
+
+
+The base URL to send all API requests is https://api.notion.com. HTTPS is required for all API requests.

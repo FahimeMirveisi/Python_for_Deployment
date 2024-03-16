@@ -1,0 +1,11 @@
+curl --location 'http://api.alquran.cloud/v1/surah/114'
+
+curl --location 'numbersapi.com/7'
+
+curl --location 'https://www.fruityvice.com/api/fruit/apple'
+
+curl --location 'https://hp-api.onrender.com/api/spells'
+
+
+
+**********runed in linuxe terminal*************
