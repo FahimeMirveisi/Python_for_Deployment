@@ -27,8 +27,6 @@ def test3(firstname: str, lastname:str = "Hosseini"):
 def test4(name: Union[str, int]):
     return {"name" : name}
 
-
-
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id," q": q}
