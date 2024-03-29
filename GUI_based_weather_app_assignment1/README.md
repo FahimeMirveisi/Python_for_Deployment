@@ -10,7 +10,7 @@
 ## Weather app outputs
 
 ### Search page
-![search](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI%20based%20weather%20app%20(assignment1)/assets/outputs%20images/search%20page.png)
+![search](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/GUI_based_weather_app_assignment1/assets/outputs images/search page.png)
 
 
 
