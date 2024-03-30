@@ -151,7 +151,7 @@ def movies_poster(movie_name: str):
     try:
     
 
-        return FileResponse(f"./movies_posters/{movie_name}.jpg")
+        return FileResponse(f"movies_posters/{movie_name}.jpg")
     
     except:
 
