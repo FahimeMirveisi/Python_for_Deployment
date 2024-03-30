@@ -150,7 +150,7 @@ def movies_info(movie_name: str):
 def movies_poster(movie_name: str):
     try:
 
-        return FileResponse(f"/Christopher_Nolan_API_assignment3/Christopher_Nolan_API/movies_posters/{movie_name}.jpg")
+        return FileResponse(f"Christopher_Nolan_API_assignment3/Christopher_Nolan_API/movies_posters/{movie_name}.jpg")
     
     except:
 
