@@ -1,10 +1,9 @@
 from fastapi import FastAPI, HTTPException, Form
-from fastapi.responses import StreamingResponse
 import sqlite3
 
 app = FastAPI()
 
-connection = sqlite3.connect("todo.db", check_same_thread=False)
+connection = sqlite3.connect("app/todo.db", check_same_thread=False)
 my_cursor = connection.cursor()
 
 def exist_ids():
