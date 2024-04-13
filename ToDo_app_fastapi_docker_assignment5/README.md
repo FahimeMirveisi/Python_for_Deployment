@@ -28,7 +28,7 @@ Copy and paste live server URL in your browser. In the continuation of URL add /
 
 |Docker commands|What is command for?|
 |---|---|
-|docker build -t todo .| To build todo docker|
+|docker build -t todo .| To build todo docker image|
 |docker images|To see all my images|
 |docker run -d -p 80:80 todo| To create a container from todo image with random name on port 80 (local)|
 |docker ps|To see all runnung containers|
