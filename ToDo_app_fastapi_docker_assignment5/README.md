@@ -33,7 +33,7 @@ Copy and paste live server URL in your browser. In the continuation of URL add /
 |docker run -d -p 80:80 todo| To create a container from todo image with random name on port 80 (local)|
 |docker ps|To see all runnung containers|
 |docker ps -a|To see all hidden, running and exited containers|
-|docker logs <CONTAINER NAME> |To see my app functionality|
-|docker stop <CONTAINER NAME> |To stop a running container|
-|docker rm <CONTAINER NAME> |To remove a container|
-|docker rmi <IMAGE NAME> |To remove an image when Dockerfile had changes an then rebuild a new image|
+|docker logs CONTAINER NAME |To see my app functionality|
+|docker stop CONTAINER NAME |To stop a running container|
+|docker rm CONTAINER NAME |To remove a container|
+|docker rmi IMAGE NAME |To remove an image when Dockerfile had changes an then rebuild a new image|
