@@ -3,6 +3,7 @@ import sqlite3
 
 app = FastAPI()
 
+
 connection = sqlite3.connect("app/todo.db", check_same_thread=False)
 my_cursor = connection.cursor()
 
