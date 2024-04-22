@@ -31,6 +31,13 @@ def get_db():
     yield db
     db.close()
 
+@app.get("/")
+def read_root():
+    msg = "User and item beginner version"
+    return msg
+
+
+
 @app.get("/users")
 def read_user(user_id: int, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.id == user_id).first()
