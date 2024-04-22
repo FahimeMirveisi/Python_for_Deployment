@@ -54,3 +54,18 @@ def remove_user(user_id: int, db: Session = Depends(get_db)):
     db.delete(user)
     db.commit()
     return {"message": "User deleted successfully"}
+
+@app.put("/users/{user_id}")
+def update_user(user_id: int, name: str, email: str, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    if name is not None:
+        user.name = name
+    if email is not None:
+        user.email = email
+
+    db.commit()
+    db.refresh(user)
+    return user

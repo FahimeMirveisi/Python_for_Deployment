@@ -7,7 +7,12 @@ class CourseBase(BaseModel):
 class CourseCreate(CourseBase):
     pass
 
+class Course(CourseBase):
+    id:int
+    owner_id: int
 
+    class Config:
+        orm_mode = True
 
 
 class StudentBase(BaseModel):
@@ -16,3 +21,14 @@ class StudentBase(BaseModel):
     average: float
     graduated: bool
     
+
+class StudentCreate(StudentBase):
+    name: str
+    unit: int
+
+class Student(StudentBase):
+    id: int
+    courses: list[Course] = []
+
+    class Config:
+        orm_mode = True
