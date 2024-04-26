@@ -18,7 +18,7 @@ class Course(CourseBase):
 class StudentBase(BaseModel):
     firstname: str
     lastname: str
-    average: float
+    average: float | None
     graduated: bool
     
 
