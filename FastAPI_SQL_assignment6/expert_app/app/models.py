@@ -21,4 +21,5 @@ class Course(Base):
 
     owner_id = Column(Integer, ForeignKey("students.id"), autoincrement='ignore_fk')
 
-    owner = relationship("Student", back_populates="courses")
+    #owner = relationship("Student", back_populates="courses")
+    owner = relationship("Student", foreign_keys=[owner_id])
