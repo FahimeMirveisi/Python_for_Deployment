@@ -4,7 +4,9 @@ from sqlalchemy.orm import Session
 #from . import crud, schemas, models
 import crud, schemas, models
 
-from app.database import SessionLocal, engine
+#from .database import SessionLocal, engine
+from database import SessionLocal, engine
+import database
 
 models.Base.metadata.create_all(bind=engine)
 
