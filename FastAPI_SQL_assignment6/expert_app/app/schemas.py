@@ -12,23 +12,14 @@ class CourseBase(BaseModel):
 class CourseCreate(CourseBase):
     pass
 
-# Read
-class CourseReadReturn(CourseBase):
+# Read and return
+class Course(CourseBase):
     id:int
     owner_id: int
 
     class Config:
         #orm_mode = True
         from_attributes = True
-# Update
-class CourseEdit(CourseBase):
-    id: int
-    owner_id: int
-
-# Delete
-class CourseDelete(CourseBase):
-    id: int
-    owner_id: int
 
 #**********Student**********
 
@@ -44,20 +35,10 @@ class StudentCreate(StudentBase):
     pass
 
 # Read
-class StudentReadReturn(StudentBase):
+class Student(StudentBase):
     id: int
-    courses: list[CourseReadReturn] = []
+    courses: list[Course] = []
 
     class Config:
         #orm_mode = True
         from_attributes = True
-
-# Update
-class StudentEdit(StudentBase):
-    id: int
-    courses: list[CourseReadReturn] = []
-
-# Delete
-class StudentDelete(StudentBase):
-    id: int
-    courses: list[CourseReadReturn] = []
