@@ -2,8 +2,13 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
 
-from . import crud, models, schemas
-from .database import SessionLocal, engine
+#from . import crud, models, schemas
+import crud, schemas, models
+
+#from .database import SessionLocal, engine
+from database import SessionLocal, engine
+
+#import database
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -35,7 +40,7 @@ def read_students(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)
 def read_student(stu_id: int, db:Session = Depends(get_db)):
     db_student = crud.get_student(db, stu_id = stu_id)
     if db_student is None:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail="Student not found")
     return db_student
 
 
@@ -47,14 +52,14 @@ def create_student(student: schemas.StudentCreate, db: Session = Depends(get_db)
 def update_student(stu_id: int,student: schemas.StudentCreate, db:Session = Depends(get_db)):
     db_student = crud.edit_student(db = db, stu_id=stu_id,student=student)
     if not db_student:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail="Student not found")
     return db_student
     
 @app.delete("/students/{stu_id}")
 def delete_student(stu_id: int, db:Session = Depends(get_db)):
     db_student = crud.remove_student(db, stu_id=stu_id)
     if not db_student:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail="Student not found")
     
     return "student with {stu_id} id deleted"
 
