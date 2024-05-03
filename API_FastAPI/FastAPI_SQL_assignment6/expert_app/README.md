@@ -34,7 +34,7 @@ uvicorn main:app --reload
 
 Copy and paste liara URL in your browser. In the continuation of URL add /docs
 
-![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/FastAPI_SQL_assignment6/expert_app/assets/docs6.png)
+![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/API_FastAPI/FastAPI_SQL_assignment6/expert_app/assets/docs6.png)
 
 ### How to use this API
 

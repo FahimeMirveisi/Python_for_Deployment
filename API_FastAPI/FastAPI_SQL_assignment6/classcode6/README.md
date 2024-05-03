@@ -33,7 +33,7 @@ uvicorn main:app --reload
 
 Copy and paste local URL in your browser. In the continuation of URL add /docs
 
-![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/FastAPI_SQL_assignment6/classcode6/assets/beginner_app_docs.png)
+![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/API_FastAPI/FastAPI_SQL_assignment6/classcode6/assets/beginner_app_docs.png)
 
 ### How to use this API
 

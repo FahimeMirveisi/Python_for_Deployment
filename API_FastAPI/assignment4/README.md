@@ -17,7 +17,7 @@ accomplished in the correct time frame.
 
 Copy and paste local server URL in your browser. In the continuation of URL add /redoc
 
-![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/assignment4/To_Do_App/redoc_screenshot.png)
+![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/API_FastAPI/assignment4/To_Do_App/redoc_screenshot.png)
 
 ### How to use this API
 

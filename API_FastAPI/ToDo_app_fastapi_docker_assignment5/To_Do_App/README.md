@@ -38,7 +38,7 @@ uvicorn main:app --reload
 
 Copy and paste live server URL in your browser. In the continuation of URL add /docs
 
-![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/ToDo_app_fastapi_docker_assignment5/To_Do_App/assets/docs.png)
+![documentation](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/API_FastAPI/ToDo_app_fastapi_docker_assignment5/To_Do_App/assets/docs.png)
 
 ### How to use this API
 
