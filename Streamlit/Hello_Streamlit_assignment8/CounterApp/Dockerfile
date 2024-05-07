@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone the Streamlit example repository
-RUN git clone https://github.com/FahimeMirveisi/Python_for_Deployment/tree/main/Streamlit/Hello_Streamlit_assignment8/CounterApp.git
+RUN git clone https://github.com/FahimeMirveisi/Python_for_Deployment.git
 
 # Install Python dependencies
 RUN pip3 install -r requirements.txt
