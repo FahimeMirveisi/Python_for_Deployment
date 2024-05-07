@@ -9,5 +9,7 @@ contain 2 projects:
 
 An app for zoom in and zoom out
 
+** Deployed on liara: 
+
 ### Simple DataScience App
 

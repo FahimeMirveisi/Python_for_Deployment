@@ -1,0 +1,9 @@
+{
+    "port": 8501,
+    "disks":[
+        {
+            "name": "data",
+            "mountTo": "/app/"
+        }
+    ]
+}
