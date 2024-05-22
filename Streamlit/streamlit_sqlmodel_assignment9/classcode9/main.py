@@ -1,7 +1,5 @@
 import streamlit as st
-import streamlit_pdf_viewer as pdf_viewer
-
-pdf_viewer("the big book of small python projects.pdf")
+from streamlit_pdf_viewer import pdf_viewer
 import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
@@ -11,6 +9,7 @@ from streamlit_authenticator.utilities.exceptions import (CredentialsError,
                                                           RegisterError,
                                                           ResetError,
                                                           UpdateError) 
+
 
 # Loading config file
 with open('./config.yaml', 'r', encoding='utf-8') as file:
@@ -35,6 +34,7 @@ if st.session_state["authentication_status"]:
     authenticator.logout()
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.title('Some content')
+    pdf_viewer("the big book of small python projects.pdf")
 
 
 elif st.session_state["authentication_status"] is False:

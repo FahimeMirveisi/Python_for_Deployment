@@ -10,10 +10,16 @@ credentials:
       logged_in: false
       name: David Baldwin
       password: $2b$12$E9/bCaN/r8sN/FV2l8NpgOgspUBAp7UAVU6BgsXJzp/pW8gQWCprC
+    fahime:
+      email: fahime1@gmail.com
+      failed_login_attempts: 0
+      logged_in: true
+      name: fahime
+      password: $2b$12$2f9QCgg85K1OoJZs7HC3ye.3OVv9xjn82YzUbtB0PqskdrRAFo/36
     fahime3040:
       email: fahime@gmail.com
       failed_login_attempts: 0
-      logged_in: true
+      logged_in: false
       name: fahime
       password: $2b$12$ZJGtdOZ.BBt1iuSIvOQ64u/6dlU.YeoBV0E5.WKr/nQW7OFeaXLcS
     jsmith:
