@@ -23,7 +23,7 @@ with col1:
     else:
         st.write("خداحافظ")
 
-
+    
     st.text_input("FirstName")
     st.text_input("LastName")
 
