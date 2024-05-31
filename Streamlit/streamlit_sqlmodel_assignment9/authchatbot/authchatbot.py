@@ -1,17 +1,28 @@
+import os
 import streamlit as st
-from sqlmodel import Field, Session, SQLModel, create_engine, select
+from sqlmodel import Session, SQLModel, create_engine, select
 from streamlit_option_menu import option_menu
 from streamlit_cookies_manager import EncryptedCookieManager
 from models import User, Message
 
+
 st.title("Wellcome to my ChatBot")
+
+# Part1 : connect to the database
+@st.cache_resource
+def connect_to_database():
+    engine = create_engine("sqlite:///authchatbotdatabase.db")
+    SQLModel.metadata.create_all(engine)
+    return engine
+
+engine = connect_to_database()  
+
+# Part2: auth
 
 with st.sidebar:
     selected = option_menu("Chat Bot", ["signing in", 'signing up'], 
         icons=['house', 'house'], menu_icon="cast", default_index=1)
     
-global signedup
-global signedin 
 
 if selected == "signing in":
 
@@ -23,9 +34,11 @@ if selected == "signing in":
 
         # Every form must have a submit button.
         signedin = st.form_submit_button("Signin")
+        signedup = False
         
 
-else:
+elif selected == "signing up":
+
     with st.form("Sign up"):
         st.header("Sign up")
 
@@ -37,14 +50,9 @@ else:
 
         # Every form must have a submit button.
         signedup = st.form_submit_button("Signup")
+        signedin = False
 
-@st.cache_resource
-def connect_to_database():
-    engine = create_engine("sqlite:///authchatbotdatabase.db")
-    SQLModel.metadata.create_all(engine)
-    return engine
-
-engine = connect_to_database()       
+     
 
 
 # Enter chatbot after user signed in or signed up
@@ -58,10 +66,16 @@ if signedup or signedin:
     def process(user_text_message):
         ai_text_message = ai(user_text_message)
 
-        user_message = Message(text=user_text_message, type="user", user_id=1)
-        ai_message = Message(text=ai_text_message, type="ai", user_id=1)
-
         # backend
+        user_message = Message(text=user_text_message,
+                               type="user",
+                                 user_id=1)
+       
+        ai_message = Message(text=ai_text_message,
+                              type="ai",
+                                user_id=1)
+
+        
         with Session(engine) as session:
             session.add(user_message)
             session.add(ai_message)
