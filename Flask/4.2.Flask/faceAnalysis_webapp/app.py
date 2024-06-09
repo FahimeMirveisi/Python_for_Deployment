@@ -22,6 +22,10 @@ def allowed_file(filename):
 def index():
     return render_template("index.html")
 
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == "GET":
@@ -37,6 +41,11 @@ def login():
         else:
             # login
             return redirect(url_for('login'))
+        
+@app.route("/register")
+def register():
+    return render_template("register.html")
+    
             
 
 @app.route("/upload", methods=['GET', 'POST'])
@@ -62,6 +71,11 @@ def upload():
 
 
             return render_template("result.html", age = age)
+
+@app.route("/bmr")
+def bmr():
+    return render_template("bmr.html")
+
 
 
 # @app.route("/result")
