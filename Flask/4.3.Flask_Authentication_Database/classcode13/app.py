@@ -49,15 +49,32 @@ def login():
     if request.method == "GET":
         return render_template("login.html")
     elif request.method == "POST":
-        my_email = request.form["email"]
-        my_password = request.form["password"]
-        result = auth(my_email, my_password)
+        username=request.form["username"]
+        password=request.form["password"]
+
+        try:
+            login_model = LoginModel(
+                username=request.form["username"],
+                password=request.form["password"]
+            )
+
+        except:
+            print("Type error")
+            return redirect(url_for("login"))
+        
+        with Session(engine) as db_session:
+            statement = select(User).where(User.username == login_model.username).where(User.password == login_model.password)
+            result = db_session.exec(statement).first()
+
+        
         if result:
             # upload
+            print("Welcome, you are logged in")
             return redirect(url_for('upload'))
 
         else:
             # login
+            print("Username or password is incorrect")
             return redirect(url_for('login'))
         
 
