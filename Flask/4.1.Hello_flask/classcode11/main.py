@@ -22,5 +22,5 @@ def my_information():
 def blog():
     if request.method == "GET":
         return "This is get method"
-    elif request.method == "PUT":
+    elif request.method == "POST":
         return "This is post method"
