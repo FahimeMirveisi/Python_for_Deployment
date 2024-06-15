@@ -71,6 +71,8 @@ def upload():
 
 
             return render_template("result.html", age = age)
+        
+        
 
 @app.route("/bmr")
 def bmr():
@@ -78,7 +80,7 @@ def bmr():
 
 
 
-# @app.route("/result")
-# def result():
-#     return render_template("result.html")
+@app.route("/result")
+def result():
+    return render_template("result.html")
 
