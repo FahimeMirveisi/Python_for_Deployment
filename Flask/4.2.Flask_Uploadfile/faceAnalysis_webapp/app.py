@@ -68,11 +68,15 @@ def upload():
 
                 age = result[0]['age']
                 print(age)
+                print(save_path)
 
 
-            return render_template("result.html", age = age)
+                return render_template("result.html", age = age , uploaded_image =my_image.filename)
         
-        
+@app.route('/uploads/<filename>')
+def send_uploaded_file(filename=''):
+    from flask import send_from_directory
+    return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
 
 @app.route("/bmr")
 def bmr():
@@ -80,7 +84,7 @@ def bmr():
 
 
 
-@app.route("/result")
-def result():
-    return render_template("result.html")
+# @app.route("/result")
+# def result():
+#     return render_template("result.html")
 
