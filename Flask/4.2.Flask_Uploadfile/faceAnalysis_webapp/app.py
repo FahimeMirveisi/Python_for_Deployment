@@ -78,10 +78,31 @@ def send_uploaded_file(filename=''):
     from flask import send_from_directory
     return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
 
-@app.route("/bmr")
+@app.route("/bmr", methods=['GET', 'POST'])
 def bmr():
-    return render_template("bmr.html")
+    if request.method == "GET":
+        return render_template("bmr.html")
+    elif request.method == "POST":
+        my_weight = float(request.form["weight"])
+        my_height = float(request.form["height"])
+        my_age = int(request.form["age"])
+        my_gender = request.form["gender"]
+        
+        if my_gender == "female":
+            # woman bmr calculator
+            bmr_result = (10 * my_weight) + (6.25 * my_height) - (5 * my_age) - 161
+            
 
+        elif my_gender == "male":
+            # man bmr calculator
+            bmr_result = (10 * my_weight) + (6.25 * my_height) - (5 * my_age) + 5
+        else:
+            # 
+            print("Enter (female) or (male) for gender")
+            return redirect(url_for('bmr'))
+        
+        return render_template("bmr.html", bmr_result=bmr_result)
+       
 
 
 # @app.route("/result")
