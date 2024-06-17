@@ -18,6 +18,15 @@ A face analysis web app developed with flask framework
 ![register page](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/Flask/4.2.Flask_Uploadfile/faceAnalysis_webapp/github_images/register_page.png)
 
 
+#### BMR
+![bmr page](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/Flask/4.2.Flask_Uploadfile/faceAnalysis_webapp/github_images/bmr_page.png)
+
+![bmr page with result](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/Flask/4.2.Flask_Uploadfile/faceAnalysis_webapp/github_images/bmr_page_with_result.png)
+
+#### Face analysis result page
+![face analysis result page](https://github.com/FahimeMirveisi/Python_for_Deployment/blob/main/Flask/4.2.Flask_Uploadfile/faceAnalysis_webapp/github_images/face_analysis_result_page.png)
+
+
 ###### This API deployed on liara :
 ** Its root live url is:  
 
