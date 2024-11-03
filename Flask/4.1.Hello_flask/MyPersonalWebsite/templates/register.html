@@ -1,62 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MyPersonalWebsite</title>
+{% extends 'layout.html' %}
 
-  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+{% block title%}
+  register
+{% endblock %}
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
-  <script src="https://kit.fontawesome.com/b77652ace9.js" crossorigin="anonymous"></script>
-  
-  
-</head>
-<body>
-
-  
-    <div class="container-fluid">
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="{{ url_for('home') }}">Personal website</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-
-                  <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ url_for('home') }}">
-                    <span class="glyphicon glyphicon-home"></span> Home</a></li>
-
-                  
-                  <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}"><span class="glyphicon glyphicon-book"></span> Blog</a></li>
-
-                  <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}"><span class="glyphicon glyphicon-phone"></span> Contact me</a></li>
-
-                  
-
-                  
-                  
-                </ul>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
-                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-
-                
-                </ul>
-               
-              </div>
-            </div>
-          </nav>
+{% block content %}
 
           <div class="container mt-4"">
     
@@ -75,18 +24,26 @@
                     <div class="card-body">
                       <h5 class="card-title">Register</h5>
                       <p class="card-text">Don`t have an account?</p>
-                      <form method="post">
+                      <form method="POST">
+
+                        <div class="form-group input-group mb-1">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                           </div>
+                          <input name="user_name" class="form-control" placeholder="Username" type="text">
+                        </div> 
+                        <!-- form-group// username-->
 
                         <div class="form-group input-group mb-1">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                <span class="input-group-text"> <i class="fa-solid fa-circle-user"></i> </span>
                              </div>
                             <input name="first_name" class="form-control" placeholder="First name" type="text">
                         </div> <!-- form-group// firstname-->
 
                         <div class="form-group input-group mb-1">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                <span class="input-group-text"> <i class="fa-regular fa-circle-user"></i> </span>
                              </div>
                             <input name="last_name" class="form-control" placeholder="Last name" type="text">
                         </div> <!-- form-group// lastname-->
@@ -99,12 +56,35 @@
                         </div> <!-- form-group//email -->
 
                         <div class="form-group input-group mb-1">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa-solid fa-city"></i> </span>
+                           </div>
+                          <input name="city" class="form-control" placeholder="City" type="text">
+                        </div> <!-- form-group// city-->
+
+                        <!-- <div class="form-group input-group mb-1">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                             </div>
                            
                             <input name="phone" class="form-control" placeholder="Phone number" type="text">
-                        </div> <!-- form-group// -->
+                        </div> -->
+                         <!-- form-group//phone number -->
+
+                        <div class="form-group input-group mb-1">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa-solid fa-earth-americas"></i> </span>
+                           </div>
+                          <input name="country" class="form-control" placeholder="Country" type="text">
+                        </div> <!-- form-group// country-->
+                        
+
+                        <div class="form-group input-group mb-1">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa-solid fa-hourglass-end"></i> </span>
+                           </div>
+                          <input name="age" class="form-control" placeholder="Age" type="text">
+                        </div> <!-- form-group// age-->
     
     
                         <div class="form-group input-group mb-3">
@@ -112,7 +92,18 @@
                                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                             </div>
                             <input class="form-control" placeholder="Create password" type="password" name="password">
-                        </div> <!-- form-group// password-->
+                        </div> 
+                        <!-- form-group// password-->
+
+<!-- 
+                        <div class="form-group input-group mb-3">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                          </div>
+                          <input class="form-control" placeholder="Confirm password" type="password" name="confirm_password">
+                        </div> -->
+                         <!-- form-group// confirm password-->
+
     
                         <button type="submit" class="btn btn-primary" href="#">sign up</button>
                       </form>
@@ -131,8 +122,4 @@
     
 </div>
 
-</div>
-
-<script src="static/js/bootstrap.js"></script>
-</body>
-</html>
+{% endblock %}
