@@ -1,13 +1,39 @@
-{% if latest_question_list %}
+{% extends "polls/layout.html" %}
 
-    <ul>
-        {% for question in latest_question_list %}
-            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% endfor %}
-    </ul>
+{% block content %}
+<hr class="border border-danger border-2 opacity-50">
 
-{% else %}
 
-    <p>No polls are available.</p>
+<table class="table table-hover">
+    <thead class="table-light">
+        <tr>
+            <th scope="col"><p class="h3">سوال ها</p></th>
+        </tr>
+        
+    </thead>
+    
+    {% if latest_question_list %}
 
-{% endif %}
+        <ul>
+            {% for question in latest_question_list %}
+            <tbody >
+                <tr>
+                
+                    <td><li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li></td>
+                  </tr>
+                
+            </tbody>
+            {% endfor %}
+        </ul>
+</table>
+
+    {% else %}
+
+        <p>No polls are available.</p>
+
+    {% endif %}
+
+    <hr class="border border-danger border-2 opacity-50">
+
+{% endblock %}
+

@@ -1,12 +1,23 @@
-<form action="{% url 'polls:vote' question.id %}" method="post">
-{% csrf_token %}
-<fieldset>
-    <legend><h1>{{ question.question_text }}</h1></legend>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id}}"><br>
-        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-    {% endfor %}
-</fieldset>
-<input type="submit" value="vote">
-</form>
+{% extends "polls/layout.html" %}
+
+{% block content %}  
+<hr class="border border-danger border-2 opacity-50"> 
+
+   <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h4>{{ question.question_text }}</h4></legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for choice in question.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id}}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+    </fieldset>
+    <!-- <input type="submit" value="vote"> -->
+     <br>
+    <button type="submit" class="btn btn-danger btn-lg">vote</button>
+
+    </form>
+
+    <hr class="border border-danger border-2 opacity-50">
+{% endblock %}
