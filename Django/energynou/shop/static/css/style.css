@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: 'energynoufont';
+    src: url('../static/fonts/IRANSansWeb\(FaNum\).woff') format('woff');
+}
+
+body,html{
+    font-family: 'energynoufont';
+    background-color: #faf4f4;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+header .top-access a{
+    font-size: 17px;
+    padding: 20px 7px;
+}
+
+header .top-menu{
+    z-index: 10;
+    height: 57px;
+    position: relative;
+}
+
+header .main-menu ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header .main-menu ul li {
+    display: inline-block;
+    margin: 4px;
+    position: relative;
+}
+
+header .main-menu ul li a{
+    display: inline-block;
+    padding: 15px 5px;
+    color: #eee;
+    position: relative;
+}
+
+header .main-menu ul li > ul > li > a{
+    position: relative;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+header .main-menu ul li > ul > li > a::before{
+    position:absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    top: 13px;
+    right: 0px;
+    background-color: #888;
+    transition: all 0.5s ease;
+}
+
+header .main-menu ul li > ul > li > a:hover{
+    right: 8px;
+    transition: all 0.5s ease;
+}
+
+header .main-menu ul li > ul > li > a:hover::before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    transition: all 0.5 ease;
+}
+
+header .main-menu ul li ul{
+    position: absolute;
+    right: 0;
+    top: 48px;
+    width: 200px;
+    background-color: #fff;
+    text-align: right;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+
+header .main-menu ul > li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s  ease;
+    padding: 8px;
+}
+
+header .main-menu ul li ul li{
+    display: block;
+}
+
+header .main-menu ul li ul li a{
+    color: #717171;
+    padding: 5px 10px;
+    display: block;
+}
+
+header .main-menu ul li > ul > li > ul{
+    right: 100%;
+    top: -12px;
+}
+
+header .slider-box{
+    margin: -57px;
+    position: relative;
+}
+
+header .slider-box::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000073;
+}
+
+header .slider-box .carousel-caption{
+    top: 40%;
+    z-index: 1;
+}

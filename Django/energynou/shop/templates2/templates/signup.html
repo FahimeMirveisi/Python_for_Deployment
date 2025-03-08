@@ -1,0 +1,32 @@
+{% extends 'master.html' %}
+
+{% block title %}
+
+    ثبت نام مشتری
+
+{% endblock %}
+
+{% block content %}
+
+    <style>
+
+        table{
+            margin: auto;
+        }
+        table tr td{
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+    <form method="post">
+        {% csrf_token %}
+
+        <ul  class="form-list" style="padding-left: 0;">
+            {{ form.as_ul }}
+        </ul>
+        
+        <button type="submit">ثبت نام</button>
+    </form>
+
+    
+{% endblock %}

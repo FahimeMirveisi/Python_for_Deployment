@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+AUTH_USER_MODEL = 'shop.Customer'
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
